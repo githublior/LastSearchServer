@@ -1,0 +1,11 @@
+{
+  "name": "lastsearchserver-1",
+  "version": "1.0.0",
+  "description": "node app for Last Search Server",
+  "main": "LSServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lior shimon",
+  "license": "ISC"
+}
