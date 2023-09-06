@@ -11,7 +11,7 @@ const port = 8080;
 
 
 // Connect to MongoDB database
-const uri = "mongodb+srv://liorcbh:Ohsnap09@cluster0.pszlslj.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://liorcbh:<password>@cluster0.pszlslj.mongodb.net/?retryWrites=true&w=majority";
 async function connectMDB(){
     try{
         await mongoose.connect(uri);
@@ -152,7 +152,7 @@ app.get('/health', (req, res) => {
 
 //GET /lastSearches?userId=X&limit=N
 app.get('/lastSearches', async(req, res) => {
-    const { userId, limit } = req.query;
+    const { userId, limit } = req.query; //add default value
     const twoWeeksAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
   
     const lastSearches = await userHistory
